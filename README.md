@@ -1,5 +1,6 @@
 # IDontLikeFileLocks
-- dump locked files by stealing section handles from running processes
+- dump locked files / read / close remote handles :)
+- Theres few methods in the repo and have readme feel free to read findfileinsection which has info on about how ive done it :D
 
 ## What This Does
 Browsers lock their databases (Cookies, Login Data, History). You can't copy them while the browser is running.

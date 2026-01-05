@@ -46,3 +46,5 @@ tested on x64 Windows 11 (25H2)
 
 don’t use this on machines you don’t own or have permission to test on.  
 prison is bad for your coding productivity 🤔❗
+
+credits - https://github.com/etwhook/FileLockerFinder, zeromemoryex.

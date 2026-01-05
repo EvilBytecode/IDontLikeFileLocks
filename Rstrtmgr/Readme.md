@@ -9,7 +9,7 @@ normally if a file is in use, you can’t touch it. Windows has a thing called t
 * `RmStartSession` opens a session with the OS
 * `RmRegisterResources` tells it which file we want
 * `RmGetList` checks if any processes are locking it
-* `RmShutdown` politely tells the OS: "yo can you release this file for a hot sec?"
+* `RmShutdown` politely tells the OS: "yo can you release this file for a hot sec? (doesnt really release but kills the process -> read WhyThisWorks so u understand why this is way better than just spamming taskkil /f /im browsername.exe and hoping itll work)"
 * `RmEndSession` closes everything back up
 
 once the file is released, we read it and dump it into a `dump` folder. it’s basically Windows saying: "ok fine, you can have it now."
@@ -18,7 +18,7 @@ once the file is released, we read it and dump it into a `dump` folder. it’s b
 
 because Windows has to let processes release files for updates, the Restart Manager API is allowed to temporarily unlock files
 , sadly this kills the process so u can also do TASKILL /F /IM procname.exe, but this is way better cuz we dont guess the name so less IOC
-
+good thing is Less IoC and also that this can survive filename-spoofing e.g chrome.exe is renamed to Rand.exe. 
 ## Usage
 
 ```
